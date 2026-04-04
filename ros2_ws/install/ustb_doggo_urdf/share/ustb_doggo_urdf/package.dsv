@@ -1,8 +1,0 @@
-source;share/ustb_doggo_urdf/hook/cmake_prefix_path.ps1
-source;share/ustb_doggo_urdf/hook/cmake_prefix_path.dsv
-source;share/ustb_doggo_urdf/hook/cmake_prefix_path.sh
-source;share/ustb_doggo_urdf/local_setup.bash
-source;share/ustb_doggo_urdf/local_setup.dsv
-source;share/ustb_doggo_urdf/local_setup.ps1
-source;share/ustb_doggo_urdf/local_setup.sh
-source;share/ustb_doggo_urdf/local_setup.zsh
