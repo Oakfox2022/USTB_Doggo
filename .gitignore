@@ -1,0 +1,28 @@
+# ROS2 & Colcon
+build/
+install/
+log/
+.colcon/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Gazebo / Ignition / GZ
+*.log
+.gazebo/
+~/.gazebo/
+models/
+worlds/*.dae   # 如果有大模型文件可以按需忽略
+
+# IDE / 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# 其他临时文件
+*.bak
+*.tmp
