@@ -96,8 +96,8 @@ private:
   rclcpp::TimerBase::SharedPtr timer_;
 
   //参数
-  double cycle_time_ = 0.8;// 一个完整 trot 周期 (s)
-  double step_height_ = 0.08;// 抬腿高度 (m)
+  double cycle_time_ = 0.6;// 一个完整 trot 周期 (s)
+  double step_height_ = 0.05;// 抬腿高度 (m)
   double body_height_ = 0.2;// 静止时躯干高度
   double forward_speed_ = 0.0;// 前进速度 (m/s)
   double phase_ = 0.0;
