@@ -1,0 +1,328 @@
+[0.000000] (-) TimerEvent: {}
+[0.000492] (ustb_doggo_impedance_controller) JobQueued: {'identifier': 'ustb_doggo_impedance_controller', 'dependencies': OrderedDict()}
+[0.000540] (ustb_doggo_urdf) JobQueued: {'identifier': 'ustb_doggo_urdf', 'dependencies': OrderedDict()}
+[0.000568] (ustb_doggo_virtual_model_control) JobQueued: {'identifier': 'ustb_doggo_virtual_model_control', 'dependencies': OrderedDict()}
+[0.000595] (ustb_doggo_impedance_controller) JobStarted: {'identifier': 'ustb_doggo_impedance_controller'}
+[0.006038] (ustb_doggo_urdf) JobStarted: {'identifier': 'ustb_doggo_urdf'}
+[0.009424] (ustb_doggo_virtual_model_control) JobStarted: {'identifier': 'ustb_doggo_virtual_model_control'}
+[0.014396] (ustb_doggo_impedance_controller) JobProgress: {'identifier': 'ustb_doggo_impedance_controller', 'progress': 'cmake'}
+[0.015796] (ustb_doggo_impedance_controller) JobProgress: {'identifier': 'ustb_doggo_impedance_controller', 'progress': 'build'}
+[0.015860] (ustb_doggo_impedance_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller', '--', '-j16', '-l16'], 'cwd': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'oakfox'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/oakfox/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/oakfox'), ('OLDPWD', '/home/oakfox/srtp/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '2530'), ('SYSTEMD_EXEC_PID', '2872'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5118'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'oakfox'), ('JOURNAL_STREAM', '8:17952'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'oakfox'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:@/tmp/.ICE-unix/2668,unix/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:/tmp/.ICE-unix/2668'), ('INVOCATION_ID', '554f6b65165d4501be3e00b98fd3ef85'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UKQ1L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7236b305-3f63-40d2-ab73-4fbe9b34e569'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble')]), 'shell': False}
+[0.018756] (ustb_doggo_urdf) JobProgress: {'identifier': 'ustb_doggo_urdf', 'progress': 'cmake'}
+[0.018923] (ustb_doggo_urdf) JobProgress: {'identifier': 'ustb_doggo_urdf', 'progress': 'build'}
+[0.019133] (ustb_doggo_urdf) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf', '--', '-j16', '-l16'], 'cwd': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'oakfox'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/oakfox/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/oakfox'), ('OLDPWD', '/home/oakfox/srtp/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '2530'), ('SYSTEMD_EXEC_PID', '2872'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5118'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'oakfox'), ('JOURNAL_STREAM', '8:17952'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'oakfox'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:@/tmp/.ICE-unix/2668,unix/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:/tmp/.ICE-unix/2668'), ('INVOCATION_ID', '554f6b65165d4501be3e00b98fd3ef85'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UKQ1L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7236b305-3f63-40d2-ab73-4fbe9b34e569'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble')]), 'shell': False}
+[0.022475] (ustb_doggo_virtual_model_control) JobProgress: {'identifier': 'ustb_doggo_virtual_model_control', 'progress': 'cmake'}
+[0.022945] (ustb_doggo_virtual_model_control) JobProgress: {'identifier': 'ustb_doggo_virtual_model_control', 'progress': 'build'}
+[0.023689] (ustb_doggo_virtual_model_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control', '--', '-j16', '-l16'], 'cwd': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'oakfox'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/oakfox/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/oakfox'), ('OLDPWD', '/home/oakfox/srtp/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '2530'), ('SYSTEMD_EXEC_PID', '2872'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5118'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'oakfox'), ('JOURNAL_STREAM', '8:17952'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'oakfox'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:@/tmp/.ICE-unix/2668,unix/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:/tmp/.ICE-unix/2668'), ('INVOCATION_ID', '554f6b65165d4501be3e00b98fd3ef85'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UKQ1L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7236b305-3f63-40d2-ab73-4fbe9b34e569'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble')]), 'shell': False}
+[0.065324] (ustb_doggo_urdf) CommandEnded: {'returncode': 0}
+[0.066602] (ustb_doggo_urdf) JobProgress: {'identifier': 'ustb_doggo_urdf', 'progress': 'install'}
+[0.072837] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target virtual_model_control\x1b[0m\n'}
+[0.079805] (ustb_doggo_urdf) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf'], 'cwd': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'oakfox'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/oakfox/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/oakfox'), ('OLDPWD', '/home/oakfox/srtp/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '2530'), ('SYSTEMD_EXEC_PID', '2872'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5118'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'oakfox'), ('JOURNAL_STREAM', '8:17952'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'oakfox'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:@/tmp/.ICE-unix/2668,unix/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:/tmp/.ICE-unix/2668'), ('INVOCATION_ID', '554f6b65165d4501be3e00b98fd3ef85'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UKQ1L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7236b305-3f63-40d2-ab73-4fbe9b34e569'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble')]), 'shell': False}
+[0.081893] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'[ 25%] Built target keyboard_control\n'}
+[0.086128] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'[ 50%] Built target forward_kinematics\n'}
+[0.088882] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'[ 75%] Built target joint_impedance\n'}
+[0.089292] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'[ 33%] Built target keyboard_control_vmc\n'}
+[0.089692] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.090098] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes\n'}
+[0.090220] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rbb_1.STL\n'}
+[0.090341] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_Wheel_lf.STL\n'}
+[0.090496] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lfb_1.STL\n'}
+[0.090601] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lff_1.STL\n'}
+[0.090868] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/base_link.STL\n'}
+[0.090971] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rff.STL\n'}
+[0.091072] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lff.STL\n'}
+[0.091171] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lbf.STL\n'}
+[0.091527] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_Wheel_lb.STL\n'}
+[0.091603] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_Wheel_rf.STL\n'}
+[0.091659] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rbf.STL\n'}
+[0.091712] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rbb.STL\n'}
+[0.091762] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lbf_1.STL\n'}
+[0.091809] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lfb.STL\n'}
+[0.091856] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lbb_1.STL\n'}
+[0.091948] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rbf_1.STL\n'}
+[0.092090] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rfb_1.STL\n'}
+[0.092144] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rfb.STL\n'}
+[0.092222] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_lbb.STL\n'}
+[0.092274] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_rff_1.STL\n'}
+[0.092324] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/meshes/Link_Wheel_rb.STL\n'}
+[0.092390] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/urdf\n'}
+[0.092450] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/urdf/ustb_doggo_urdf.urdf\n'}
+[0.092504] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'[ 66%] Built target trot_gait_generator\n'}
+[0.092581] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/urdf/ustb_doggo_urdf.csv\n'}
+[0.092655] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/launch\n'}
+[0.092729] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/launch/gazebo.launch\n'}
+[0.092812] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/launch/display.launch\n'}
+[0.092930] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/launch/ustb_doggo.launch.py\n'}
+[0.093344] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/config\n'}
+[0.093873] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/config/joint_names_ustb_doggo_urdf.yaml\n'}
+[0.094023] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/config/controllers.yaml\n'}
+[0.094167] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ament_index/resource_index/package_run_dependencies/ustb_doggo_urdf\n'}
+[0.094404] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ament_index/resource_index/parent_prefix_path/ustb_doggo_urdf\n'}
+[0.094956] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/environment/ament_prefix_path.sh\n'}
+[0.095028] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/environment/ament_prefix_path.dsv\n'}
+[0.095082] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/environment/path.sh\n'}
+[0.095503] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/environment/path.dsv\n'}
+[0.095577] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/local_setup.bash\n'}
+[0.095634] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/local_setup.sh\n'}
+[0.095769] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/local_setup.zsh\n'}
+[0.095824] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/local_setup.dsv\n'}
+[0.095875] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Installing: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.dsv\n'}
+[0.095927] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ament_index/resource_index/packages/ustb_doggo_urdf\n'}
+[0.095977] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/cmake/ustb_doggo_urdfConfig.cmake\n'}
+[0.096026] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/cmake/ustb_doggo_urdfConfig-version.cmake\n'}
+[0.096077] (ustb_doggo_urdf) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.xml\n'}
+[0.096128] (ustb_doggo_urdf) CommandEnded: {'returncode': 0}
+[0.096448] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/virtual_model_control.dir/src/virtual_model_control.cpp.o\x1b[0m\n'}
+[0.099368] (-) TimerEvent: {}
+[0.107106] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'[100%] Built target cartesian_impedance\n'}
+[0.124678] (ustb_doggo_urdf) JobEnded: {'identifier': 'ustb_doggo_urdf', 'rc': 0}
+[0.126135] (ustb_doggo_impedance_controller) CommandEnded: {'returncode': 0}
+[0.127067] (ustb_doggo_impedance_controller) JobProgress: {'identifier': 'ustb_doggo_impedance_controller', 'progress': 'install'}
+[0.127512] (ustb_doggo_impedance_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller'], 'cwd': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'oakfox'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/oakfox/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/oakfox'), ('OLDPWD', '/home/oakfox/srtp/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '2530'), ('SYSTEMD_EXEC_PID', '2872'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5118'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'oakfox'), ('JOURNAL_STREAM', '8:17952'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'oakfox'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:@/tmp/.ICE-unix/2668,unix/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:/tmp/.ICE-unix/2668'), ('INVOCATION_ID', '554f6b65165d4501be3e00b98fd3ef85'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UKQ1L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7236b305-3f63-40d2-ab73-4fbe9b34e569'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble')]), 'shell': False}
+[0.137643] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.137927] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/ustb_doggo_impedance_controller/joint_impedance\n'}
+[0.138064] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/ustb_doggo_impedance_controller/forward_kinematics\n'}
+[0.138336] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/ustb_doggo_impedance_controller/cartesian_impedance\n'}
+[0.138593] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/ustb_doggo_impedance_controller/keyboard_control\n'}
+[0.138740] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ament_index/resource_index/package_run_dependencies/ustb_doggo_impedance_controller\n'}
+[0.138823] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ament_index/resource_index/parent_prefix_path/ustb_doggo_impedance_controller\n'}
+[0.138880] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/environment/ament_prefix_path.sh\n'}
+[0.138936] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/environment/ament_prefix_path.dsv\n'}
+[0.139024] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/environment/path.sh\n'}
+[0.139135] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/environment/path.dsv\n'}
+[0.139192] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/local_setup.bash\n'}
+[0.139246] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/local_setup.sh\n'}
+[0.139301] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/local_setup.zsh\n'}
+[0.139361] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/local_setup.dsv\n'}
+[0.139420] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Installing: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.dsv\n'}
+[0.139505] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ament_index/resource_index/packages/ustb_doggo_impedance_controller\n'}
+[0.139602] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/cmake/ustb_doggo_impedance_controllerConfig.cmake\n'}
+[0.139655] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/cmake/ustb_doggo_impedance_controllerConfig-version.cmake\n'}
+[0.139715] (ustb_doggo_impedance_controller) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.xml\n'}
+[0.141581] (ustb_doggo_impedance_controller) CommandEnded: {'returncode': 0}
+[0.155891] (ustb_doggo_impedance_controller) JobEnded: {'identifier': 'ustb_doggo_impedance_controller', 'rc': 0}
+[0.199484] (-) TimerEvent: {}
+[0.299786] (-) TimerEvent: {}
+[0.400140] (-) TimerEvent: {}
+[0.500484] (-) TimerEvent: {}
+[0.600778] (-) TimerEvent: {}
+[0.701082] (-) TimerEvent: {}
+[0.801535] (-) TimerEvent: {}
+[0.901938] (-) TimerEvent: {}
+[1.002292] (-) TimerEvent: {}
+[1.102691] (-) TimerEvent: {}
+[1.203102] (-) TimerEvent: {}
+[1.303506] (-) TimerEvent: {}
+[1.403825] (-) TimerEvent: {}
+[1.504188] (-) TimerEvent: {}
+[1.604549] (-) TimerEvent: {}
+[1.704848] (-) TimerEvent: {}
+[1.805278] (-) TimerEvent: {}
+[1.905630] (-) TimerEvent: {}
+[2.005959] (-) TimerEvent: {}
+[2.106313] (-) TimerEvent: {}
+[2.206683] (-) TimerEvent: {}
+[2.307047] (-) TimerEvent: {}
+[2.407338] (-) TimerEvent: {}
+[2.507657] (-) TimerEvent: {}
+[2.608015] (-) TimerEvent: {}
+[2.708337] (-) TimerEvent: {}
+[2.808666] (-) TimerEvent: {}
+[2.908999] (-) TimerEvent: {}
+[3.009370] (-) TimerEvent: {}
+[3.109801] (-) TimerEvent: {}
+[3.210145] (-) TimerEvent: {}
+[3.310508] (-) TimerEvent: {}
+[3.410938] (-) TimerEvent: {}
+[3.511375] (-) TimerEvent: {}
+[3.611742] (-) TimerEvent: {}
+[3.712182] (-) TimerEvent: {}
+[3.812649] (-) TimerEvent: {}
+[3.912948] (-) TimerEvent: {}
+[4.013319] (-) TimerEvent: {}
+[4.113696] (-) TimerEvent: {}
+[4.214091] (-) TimerEvent: {}
+[4.314411] (-) TimerEvent: {}
+[4.414780] (-) TimerEvent: {}
+[4.515240] (-) TimerEvent: {}
+[4.615562] (-) TimerEvent: {}
+[4.715888] (-) TimerEvent: {}
+[4.816205] (-) TimerEvent: {}
+[4.916526] (-) TimerEvent: {}
+[5.016906] (-) TimerEvent: {}
+[5.117307] (-) TimerEvent: {}
+[5.217641] (-) TimerEvent: {}
+[5.318044] (-) TimerEvent: {}
+[5.418437] (-) TimerEvent: {}
+[5.518739] (-) TimerEvent: {}
+[5.619083] (-) TimerEvent: {}
+[5.719508] (-) TimerEvent: {}
+[5.819830] (-) TimerEvent: {}
+[5.920231] (-) TimerEvent: {}
+[6.020566] (-) TimerEvent: {}
+[6.120865] (-) TimerEvent: {}
+[6.221214] (-) TimerEvent: {}
+[6.321608] (-) TimerEvent: {}
+[6.422009] (-) TimerEvent: {}
+[6.522322] (-) TimerEvent: {}
+[6.622713] (-) TimerEvent: {}
+[6.723048] (-) TimerEvent: {}
+[6.823449] (-) TimerEvent: {}
+[6.923885] (-) TimerEvent: {}
+[7.024254] (-) TimerEvent: {}
+[7.124654] (-) TimerEvent: {}
+[7.225003] (-) TimerEvent: {}
+[7.325434] (-) TimerEvent: {}
+[7.425803] (-) TimerEvent: {}
+[7.526127] (-) TimerEvent: {}
+[7.626427] (-) TimerEvent: {}
+[7.726777] (-) TimerEvent: {}
+[7.827219] (-) TimerEvent: {}
+[7.927541] (-) TimerEvent: {}
+[8.027829] (-) TimerEvent: {}
+[8.128168] (-) TimerEvent: {}
+[8.228511] (-) TimerEvent: {}
+[8.328841] (-) TimerEvent: {}
+[8.429250] (-) TimerEvent: {}
+[8.529603] (-) TimerEvent: {}
+[8.629925] (-) TimerEvent: {}
+[8.730270] (-) TimerEvent: {}
+[8.830668] (-) TimerEvent: {}
+[8.931111] (-) TimerEvent: {}
+[9.031539] (-) TimerEvent: {}
+[9.131902] (-) TimerEvent: {}
+[9.232240] (-) TimerEvent: {}
+[9.332610] (-) TimerEvent: {}
+[9.432953] (-) TimerEvent: {}
+[9.533284] (-) TimerEvent: {}
+[9.633619] (-) TimerEvent: {}
+[9.733971] (-) TimerEvent: {}
+[9.834288] (-) TimerEvent: {}
+[9.934662] (-) TimerEvent: {}
+[10.035113] (-) TimerEvent: {}
+[10.135515] (-) TimerEvent: {}
+[10.235830] (-) TimerEvent: {}
+[10.336213] (-) TimerEvent: {}
+[10.436578] (-) TimerEvent: {}
+[10.537019] (-) TimerEvent: {}
+[10.637416] (-) TimerEvent: {}
+[10.737779] (-) TimerEvent: {}
+[10.838113] (-) TimerEvent: {}
+[10.938520] (-) TimerEvent: {}
+[11.038846] (-) TimerEvent: {}
+[11.139254] (-) TimerEvent: {}
+[11.239577] (-) TimerEvent: {}
+[11.339878] (-) TimerEvent: {}
+[11.440323] (-) TimerEvent: {}
+[11.540651] (-) TimerEvent: {}
+[11.640984] (-) TimerEvent: {}
+[11.741371] (-) TimerEvent: {}
+[11.841750] (-) TimerEvent: {}
+[11.942110] (-) TimerEvent: {}
+[12.042447] (-) TimerEvent: {}
+[12.142803] (-) TimerEvent: {}
+[12.243320] (-) TimerEvent: {}
+[12.343625] (-) TimerEvent: {}
+[12.444022] (-) TimerEvent: {}
+[12.544335] (-) TimerEvent: {}
+[12.644671] (-) TimerEvent: {}
+[12.744990] (-) TimerEvent: {}
+[12.845401] (-) TimerEvent: {}
+[12.945709] (-) TimerEvent: {}
+[13.046036] (-) TimerEvent: {}
+[13.146340] (-) TimerEvent: {}
+[13.246665] (-) TimerEvent: {}
+[13.347134] (-) TimerEvent: {}
+[13.447545] (-) TimerEvent: {}
+[13.547897] (-) TimerEvent: {}
+[13.648325] (-) TimerEvent: {}
+[13.748680] (-) TimerEvent: {}
+[13.849040] (-) TimerEvent: {}
+[13.949536] (-) TimerEvent: {}
+[14.049964] (-) TimerEvent: {}
+[14.150390] (-) TimerEvent: {}
+[14.250690] (-) TimerEvent: {}
+[14.351115] (-) TimerEvent: {}
+[14.451509] (-) TimerEvent: {}
+[14.551816] (-) TimerEvent: {}
+[14.652234] (-) TimerEvent: {}
+[14.752647] (-) TimerEvent: {}
+[14.853074] (-) TimerEvent: {}
+[14.953437] (-) TimerEvent: {}
+[15.053764] (-) TimerEvent: {}
+[15.154138] (-) TimerEvent: {}
+[15.254604] (-) TimerEvent: {}
+[15.354930] (-) TimerEvent: {}
+[15.455265] (-) TimerEvent: {}
+[15.555618] (-) TimerEvent: {}
+[15.656062] (-) TimerEvent: {}
+[15.756407] (-) TimerEvent: {}
+[15.856890] (-) TimerEvent: {}
+[15.957344] (-) TimerEvent: {}
+[16.057800] (-) TimerEvent: {}
+[16.158145] (-) TimerEvent: {}
+[16.258614] (-) TimerEvent: {}
+[16.359065] (-) TimerEvent: {}
+[16.459438] (-) TimerEvent: {}
+[16.559913] (-) TimerEvent: {}
+[16.660333] (-) TimerEvent: {}
+[16.760782] (-) TimerEvent: {}
+[16.861103] (-) TimerEvent: {}
+[16.961491] (-) TimerEvent: {}
+[17.061957] (-) TimerEvent: {}
+[17.162414] (-) TimerEvent: {}
+[17.262767] (-) TimerEvent: {}
+[17.363167] (-) TimerEvent: {}
+[17.463548] (-) TimerEvent: {}
+[17.563908] (-) TimerEvent: {}
+[17.664278] (-) TimerEvent: {}
+[17.764655] (-) TimerEvent: {}
+[17.865109] (-) TimerEvent: {}
+[17.965643] (-) TimerEvent: {}
+[18.066107] (-) TimerEvent: {}
+[18.166547] (-) TimerEvent: {}
+[18.266892] (-) TimerEvent: {}
+[18.367303] (-) TimerEvent: {}
+[18.467908] (-) TimerEvent: {}
+[18.568240] (-) TimerEvent: {}
+[18.668741] (-) TimerEvent: {}
+[18.769134] (-) TimerEvent: {}
+[18.856489] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable virtual_model_control\x1b[0m\n'}
+[18.869370] (-) TimerEvent: {}
+[18.969751] (-) TimerEvent: {}
+[19.070235] (-) TimerEvent: {}
+[19.170624] (-) TimerEvent: {}
+[19.271033] (-) TimerEvent: {}
+[19.371420] (-) TimerEvent: {}
+[19.471838] (-) TimerEvent: {}
+[19.572296] (-) TimerEvent: {}
+[19.672776] (-) TimerEvent: {}
+[19.773258] (-) TimerEvent: {}
+[19.838614] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'[100%] Built target virtual_model_control\n'}
+[19.850267] (ustb_doggo_virtual_model_control) CommandEnded: {'returncode': 0}
+[19.851913] (ustb_doggo_virtual_model_control) JobProgress: {'identifier': 'ustb_doggo_virtual_model_control', 'progress': 'install'}
+[19.852490] (ustb_doggo_virtual_model_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control'], 'cwd': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'oakfox'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/oakfox/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/oakfox'), ('OLDPWD', '/home/oakfox/srtp/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '2530'), ('SYSTEMD_EXEC_PID', '2872'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5118'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'oakfox'), ('JOURNAL_STREAM', '8:17952'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'oakfox'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:@/tmp/.ICE-unix/2668,unix/oakfox-Vivobook-ASUSLaptop-X1502ZA-X1502ZA:/tmp/.ICE-unix/2668'), ('INVOCATION_ID', '554f6b65165d4501be3e00b98fd3ef85'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UKQ1L3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7236b305-3f63-40d2-ab73-4fbe9b34e569'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf:/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller:/opt/ros/humble')]), 'shell': False}
+[19.860478] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.860674] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/trot_gait_generator\n'}
+[19.860792] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Installing: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/virtual_model_control\n'}
+[19.868687] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Set runtime path of "/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/virtual_model_control" to ""\n'}
+[19.869101] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/keyboard_control_vmc\n'}
+[19.869179] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ament_index/resource_index/package_run_dependencies/ustb_doggo_virtual_model_control\n'}
+[19.869237] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ament_index/resource_index/parent_prefix_path/ustb_doggo_virtual_model_control\n'}
+[19.869291] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/ament_prefix_path.sh\n'}
+[19.869345] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/ament_prefix_path.dsv\n'}
+[19.869416] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/path.sh\n'}
+[19.869465] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/path.dsv\n'}
+[19.869512] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.bash\n'}
+[19.869559] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.sh\n'}
+[19.869606] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.zsh\n'}
+[19.869652] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.dsv\n'}
+[19.869701] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Installing: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.dsv\n'}
+[19.869782] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ament_index/resource_index/packages/ustb_doggo_virtual_model_control\n'}
+[19.869881] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/cmake/ustb_doggo_virtual_model_controlConfig.cmake\n'}
+[19.869939] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/cmake/ustb_doggo_virtual_model_controlConfig-version.cmake\n'}
+[19.870007] (ustb_doggo_virtual_model_control) StdoutLine: {'line': b'-- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.xml\n'}
+[19.871291] (ustb_doggo_virtual_model_control) CommandEnded: {'returncode': 0}
+[19.873744] (-) TimerEvent: {}
+[19.883731] (ustb_doggo_virtual_model_control) JobEnded: {'identifier': 'ustb_doggo_virtual_model_control', 'rc': 0}
+[19.884493] (-) EventReactorShutdown: {}

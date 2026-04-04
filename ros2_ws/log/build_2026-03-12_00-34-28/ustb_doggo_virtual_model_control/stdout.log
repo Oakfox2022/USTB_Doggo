@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target virtual_model_control[0m
+[ 33%] Built target trot_gait_generator
+[ 66%] Built target keyboard_control_vmc
+[ 83%] [32mBuilding CXX object CMakeFiles/virtual_model_control.dir/src/virtual_model_control.cpp.o[0m

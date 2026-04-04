@@ -1,0 +1,305 @@
+[0.092s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.092s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x71f0a142fd00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71f0a142f8b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71f0a142f8b0>>)
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.221s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.221s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/oakfox/srtp/ros2_ws'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'ros'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extensions ['cmake', 'python']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'cmake'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'python'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extensions ['python_setup_py']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain) by extension 'python_setup_py'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'ros'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extensions ['cmake', 'python']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'cmake'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'python'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extensions ['python_setup_py']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials) by extension 'python_setup_py'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'ros'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extensions ['cmake', 'python']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'cmake'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'python'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extensions ['python_setup_py']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/materials/textures) by extension 'python_setup_py'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extensions ['colcon_meta']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'colcon_meta'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extensions ['ros']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'ros'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extensions ['cmake', 'python']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'cmake'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'python'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extensions ['python_setup_py']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/Harmonic Terrain/thumbnails) by extension 'python_setup_py'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extension 'ignore_ament_install'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extensions ['colcon_pkg']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extension 'colcon_pkg'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extensions ['colcon_meta']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extension 'colcon_meta'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extensions ['ros']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_impedance_controller) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ustb_doggo_impedance_controller' with type 'ros.ament_cmake' and name 'ustb_doggo_impedance_controller'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_urdf) by extension 'ros'
+[0.241s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ustb_doggo_urdf' with type 'ros.ament_cmake' and name 'ustb_doggo_urdf'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/ustb_doggo_virtual_model_control) by extension 'ros'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ustb_doggo_virtual_model_control' with type 'ros.ament_cmake' and name 'ustb_doggo_virtual_model_control'
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.271s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/oakfox/srtp/ros2_ws/install/trot_gait_generator' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.271s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/oakfox/srtp/ros2_ws/install/trot_gait_generator' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.272s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/oakfox/srtp/ros2_ws/install
+[0.273s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 361 installed packages in /opt/ros/humble
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.310s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'cmake_target' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_impedance_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.311s] DEBUG:colcon.colcon_core.verb:Building package 'ustb_doggo_impedance_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller', 'merge_install': False, 'path': '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_impedance_controller', 'symlink_install': False, 'test_result_base': None}
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'cmake_target' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'cmake_clean_cache' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'cmake_clean_first' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'cmake_force_configure' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'ament_cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'catkin_cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_urdf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.311s] DEBUG:colcon.colcon_core.verb:Building package 'ustb_doggo_urdf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf', 'merge_install': False, 'path': '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_urdf', 'symlink_install': False, 'test_result_base': None}
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'cmake_args' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'cmake_target' from command line to 'None'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.311s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.312s] Level 5:colcon.colcon_core.verb:set package 'ustb_doggo_virtual_model_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.312s] DEBUG:colcon.colcon_core.verb:Building package 'ustb_doggo_virtual_model_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control', 'merge_install': False, 'path': '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control', 'symlink_install': False, 'test_result_base': None}
+[0.312s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.313s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.313s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_impedance_controller' with build type 'ament_cmake'
+[0.313s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_impedance_controller'
+[0.315s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.315s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.315s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.319s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_urdf' with build type 'ament_cmake'
+[0.320s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_urdf'
+[0.320s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.320s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.324s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control' with build type 'ament_cmake'
+[0.324s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control'
+[0.324s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.324s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.330s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller -- -j16 -l16
+[0.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf -- -j16 -l16
+[0.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[0.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf -- -j16 -l16
+[0.394s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf
+[0.410s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ustb_doggo_urdf)
+[0.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/oakfox/srtp/ros2_ws/build/ustb_doggo_urdf
+[0.415s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf' for CMake module files
+[0.416s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf' for CMake config files
+[0.416s] Level 1:colcon.colcon_core.shell:create_environment_hook('ustb_doggo_urdf', 'cmake_prefix_path')
+[0.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/hook/cmake_prefix_path.ps1'
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/hook/cmake_prefix_path.dsv'
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/hook/cmake_prefix_path.sh'
+[0.421s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/bin'
+[0.421s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/lib/pkgconfig/ustb_doggo_urdf.pc'
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/lib/python3.10/site-packages'
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/bin'
+[0.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.ps1'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.dsv'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.sh'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.bash'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.zsh'
+[0.425s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/colcon-core/packages/ustb_doggo_urdf)
+[0.425s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ustb_doggo_urdf)
+[0.426s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf' for CMake module files
+[0.426s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf' for CMake config files
+[0.426s] Level 1:colcon.colcon_core.shell:create_environment_hook('ustb_doggo_urdf', 'cmake_prefix_path')
+[0.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/hook/cmake_prefix_path.ps1'
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/hook/cmake_prefix_path.dsv'
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/hook/cmake_prefix_path.sh'
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/bin'
+[0.428s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/lib/pkgconfig/ustb_doggo_urdf.pc'
+[0.428s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/lib/python3.10/site-packages'
+[0.428s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/bin'
+[0.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.ps1'
+[0.429s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.dsv'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.sh'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.bash'
+[0.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/ustb_doggo_urdf/package.zsh'
+[0.431s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/oakfox/srtp/ros2_ws/install/ustb_doggo_urdf/share/colcon-core/packages/ustb_doggo_urdf)
+[0.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller -- -j16 -l16
+[0.436s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller
+[0.448s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ustb_doggo_impedance_controller)
+[0.449s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller' for CMake module files
+[0.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/oakfox/srtp/ros2_ws/build/ustb_doggo_impedance_controller
+[0.450s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller' for CMake config files
+[0.450s] Level 1:colcon.colcon_core.shell:create_environment_hook('ustb_doggo_impedance_controller', 'cmake_prefix_path')
+[0.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/hook/cmake_prefix_path.ps1'
+[0.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/hook/cmake_prefix_path.dsv'
+[0.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/hook/cmake_prefix_path.sh'
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib'
+[0.453s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/bin'
+[0.453s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/pkgconfig/ustb_doggo_impedance_controller.pc'
+[0.453s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/python3.10/site-packages'
+[0.453s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/bin'
+[0.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.ps1'
+[0.454s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.dsv'
+[0.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.sh'
+[0.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.bash'
+[0.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.zsh'
+[0.455s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/colcon-core/packages/ustb_doggo_impedance_controller)
+[0.456s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ustb_doggo_impedance_controller)
+[0.456s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller' for CMake module files
+[0.456s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller' for CMake config files
+[0.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('ustb_doggo_impedance_controller', 'cmake_prefix_path')
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/hook/cmake_prefix_path.ps1'
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/hook/cmake_prefix_path.dsv'
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/hook/cmake_prefix_path.sh'
+[0.458s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib'
+[0.458s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/bin'
+[0.458s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/pkgconfig/ustb_doggo_impedance_controller.pc'
+[0.458s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/lib/python3.10/site-packages'
+[0.459s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/bin'
+[0.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.ps1'
+[0.460s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.dsv'
+[0.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.sh'
+[0.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.bash'
+[0.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/ustb_doggo_impedance_controller/package.zsh'
+[0.463s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/oakfox/srtp/ros2_ws/install/ustb_doggo_impedance_controller/share/colcon-core/packages/ustb_doggo_impedance_controller)
+[6.259s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[6.260s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ustb_doggo_virtual_model_control)
+[6.260s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control' for CMake module files
+[6.261s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control' for CMake config files
+[6.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('ustb_doggo_virtual_model_control', 'cmake_prefix_path')
+[6.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/hook/cmake_prefix_path.ps1'
+[6.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/hook/cmake_prefix_path.dsv'
+[6.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/hook/cmake_prefix_path.sh'
+[6.264s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib'
+[6.264s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/bin'
+[6.264s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/pkgconfig/ustb_doggo_virtual_model_control.pc'
+[6.264s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/python3.10/site-packages'
+[6.265s] Level 1:colcon.colcon_core.environment:checking '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/bin'
+[6.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.ps1'
+[6.266s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.dsv'
+[6.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.sh'
+[6.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.bash'
+[6.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.zsh'
+[6.268s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/colcon-core/packages/ustb_doggo_virtual_model_control)
+[6.278s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.278s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.279s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[6.279s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.287s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.287s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.287s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.303s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.304s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/oakfox/srtp/ros2_ws/install/local_setup.ps1'
+[6.306s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/oakfox/srtp/ros2_ws/install/_local_setup_util_ps1.py'
+[6.309s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/oakfox/srtp/ros2_ws/install/setup.ps1'
+[6.311s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/oakfox/srtp/ros2_ws/install/local_setup.sh'
+[6.312s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/oakfox/srtp/ros2_ws/install/_local_setup_util_sh.py'
+[6.313s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/oakfox/srtp/ros2_ws/install/setup.sh'
+[6.315s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/oakfox/srtp/ros2_ws/install/local_setup.bash'
+[6.315s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/oakfox/srtp/ros2_ws/install/setup.bash'
+[6.316s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/oakfox/srtp/ros2_ws/install/local_setup.zsh'
+[6.317s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/oakfox/srtp/ros2_ws/install/setup.zsh'

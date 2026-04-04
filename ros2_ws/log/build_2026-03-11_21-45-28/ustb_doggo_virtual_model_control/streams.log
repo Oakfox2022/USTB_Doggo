@@ -1,0 +1,30 @@
+[0.018s] Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[0.075s] [35m[1mConsolidate compiler generated dependencies of target virtual_model_control[0m
+[0.093s] [ 33%] Built target trot_gait_generator
+[0.093s] [ 66%] Built target keyboard_control_vmc
+[0.096s] [ 83%] [32mBuilding CXX object CMakeFiles/virtual_model_control.dir/src/virtual_model_control.cpp.o[0m
+[21.219s] [100%] [32m[1mLinking CXX executable virtual_model_control[0m
+[22.371s] [100%] Built target virtual_model_control
+[22.386s] Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[22.388s] Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control
+[22.399s] -- Install configuration: ""
+[22.399s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/trot_gait_generator
+[22.399s] -- Installing: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/virtual_model_control
+[22.406s] -- Set runtime path of "/home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/virtual_model_control" to ""
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/lib/ustb_doggo_virtual_model_control/keyboard_control_vmc
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ament_index/resource_index/package_run_dependencies/ustb_doggo_virtual_model_control
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ament_index/resource_index/parent_prefix_path/ustb_doggo_virtual_model_control
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/ament_prefix_path.sh
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/ament_prefix_path.dsv
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/path.sh
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/environment/path.dsv
+[22.407s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.bash
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.sh
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.zsh
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/local_setup.dsv
+[22.408s] -- Installing: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.dsv
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ament_index/resource_index/packages/ustb_doggo_virtual_model_control
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/cmake/ustb_doggo_virtual_model_controlConfig.cmake
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/cmake/ustb_doggo_virtual_model_controlConfig-version.cmake
+[22.408s] -- Up-to-date: /home/oakfox/srtp/ros2_ws/install/ustb_doggo_virtual_model_control/share/ustb_doggo_virtual_model_control/package.xml
+[22.410s] Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control

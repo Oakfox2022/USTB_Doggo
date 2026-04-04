@@ -1,0 +1,16 @@
+[0.014s] Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[0.069s] [35m[1mConsolidate compiler generated dependencies of target virtual_model_control[0m
+[0.088s] [ 16%] [32mBuilding CXX object CMakeFiles/keyboard_control_vmc.dir/src/keyboard_control_vmc.cpp.o[0m
+[0.089s] [ 33%] [32mBuilding CXX object CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o[0m
+[0.091s] [ 66%] Built target virtual_model_control
+[2.950s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/keyboard_control_vmc.cpp:[m[K In constructor ‘[01m[KKeyboardControlVMC::KeyboardControlVMC()[m[K’:
+[2.950s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/keyboard_control_vmc.cpp:14:40:[m[K [01;31m[Kerror: [m[K‘[01m[KYourNode[m[K’ has not been declared
+[2.950s]    14 |         rclcpp::on_shutdown(std::bind(&[01;31m[KYourNode[m[K::on_shutdown_callback, this));
+[2.950s]       |                                        [01;31m[K^~~~~~~~[m[K
+[4.143s] gmake[2]: *** [CMakeFiles/keyboard_control_vmc.dir/build.make:76：CMakeFiles/keyboard_control_vmc.dir/src/keyboard_control_vmc.cpp.o] 错误 1
+[4.144s] gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/keyboard_control_vmc.dir/all] 错误 2
+[4.144s] gmake[1]: *** 正在等待未完成的任务....
+[10.475s] [ 83%] [32m[1mLinking CXX executable trot_gait_generator[0m
+[10.876s] [ 83%] Built target trot_gait_generator
+[10.877s] gmake: *** [Makefile:146：all] 错误 2
+[10.879s] Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16

@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target trot_gait_generator[0m
+[35m[1mConsolidate compiler generated dependencies of target virtual_model_control[0m
+[ 33%] Built target keyboard_control_vmc
+[ 50%] [32mBuilding CXX object CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/virtual_model_control.dir/src/virtual_model_control.cpp.o[0m
+[01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:[m[K In member function ‘[01m[Kvoid TrotGaitGenerator::timer_callback()[m[K’:
+[01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:77:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::UInt64MultiArray[m[K’ {aka ‘[01m[Kstd_msgs::msg::UInt64MultiArray_<std::allocator<void> >[m[K’}
+   77 |         phase_type_[01;31m[K->[m[Kdata[leg] = 0;
+      |                    [01;31m[K^~[m[K
+[01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:86:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kstd_msgs::msg::UInt64MultiArray[m[K’ {aka ‘[01m[Kstd_msgs::msg::UInt64MultiArray_<std::allocator<void> >[m[K’}
+   86 |         phase_type_[01;31m[K->[m[Kdata[leg] = 1;
+      |                    [01;31m[K^~[m[K
+[01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/virtual_model_control.cpp:[m[K In member function ‘[01m[Kvoid VirtualModelControl::odomCallback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/virtual_model_control.cpp:127:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  127 |     void odomCallback([01;35m[Kconst nav_msgs::msg::Odometry::SharedPtr msg[m[K)
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/trot_gait_generator.dir/build.make:76：CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/trot_gait_generator.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+[ 83%] [32m[1mLinking CXX executable virtual_model_control[0m
+[ 83%] Built target virtual_model_control
+gmake: *** [Makefile:146：all] 错误 2

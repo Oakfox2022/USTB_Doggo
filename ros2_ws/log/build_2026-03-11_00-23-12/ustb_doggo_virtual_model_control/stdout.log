@@ -1,0 +1,6 @@
+[35m[1mConsolidate compiler generated dependencies of target keyboard_control_vmc[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/keyboard_control_vmc.dir/src/keyboard_control_vmc.cpp.o[0m
+[ 66%] Built target virtual_model_control
+[ 83%] [32m[1mLinking CXX executable trot_gait_generator[0m
+[ 83%] Built target trot_gait_generator

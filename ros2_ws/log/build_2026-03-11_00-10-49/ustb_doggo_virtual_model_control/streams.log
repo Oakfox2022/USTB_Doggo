@@ -1,0 +1,14 @@
+[0.017s] Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[0.064s] [35m[1mConsolidate compiler generated dependencies of target trot_gait_generator[0m
+[0.078s] [ 33%] Built target keyboard_control_vmc
+[0.084s] [ 50%] [32mBuilding CXX object CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o[0m
+[0.089s] [ 83%] Built target virtual_model_control
+[2.305s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:[m[K In constructor ‘[01m[KTrotGaitGenerator::TrotGaitGenerator()[m[K’:
+[2.305s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kforward_speed_sub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kforward_speed_[m[K’?
+[2.305s]    16 |     [01;31m[Kforward_speed_sub_[m[K = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+[2.306s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.306s]       |     [32m[Kforward_speed_[m[K
+[4.564s] gmake[2]: *** [CMakeFiles/trot_gait_generator.dir/build.make:76：CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o] 错误 1
+[4.564s] gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/trot_gait_generator.dir/all] 错误 2
+[4.565s] gmake: *** [Makefile:146：all] 错误 2
+[4.567s] Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16

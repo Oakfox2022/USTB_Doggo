@@ -1,0 +1,33 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 500
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    leg_effort_controller:
+      type: effort_controllers/JointGroupEffortController
+
+    wheel_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+leg_effort_controller:
+  ros__parameters:
+    joints:
+      - Joint_lff
+      - Joint_lfb
+      - Joint_lbf
+      - Joint_lbb
+      - Joint_rff
+      - Joint_rfb
+      - Joint_rbf
+      - Joint_rbb
+
+wheel_velocity_controller:
+  ros__parameters:
+    joints:
+      - Joint_Wheel_lf
+      - Joint_Wheel_lb
+      - Joint_Wheel_rf
+      - Joint_Wheel_rb
+

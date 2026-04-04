@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-2f237e7c6556f5a75872.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ustb_doggo_impedance_controller",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cartesian_impedance::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cartesian_impedance-be7e94cf28280232203c.json",
+					"name" : "cartesian_impedance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "forward_kinematics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-forward_kinematics-0724cadbd8254438051d.json",
+					"name" : "forward_kinematics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "joint_impedance::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-joint_impedance-e4a3a7f4550275e40b47.json",
+					"name" : "joint_impedance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f02de4b183427228b8b4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ustb_doggo_impedance_controller_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ustb_doggo_impedance_controller_uninstall-36b4830458632777699d.json",
+					"name" : "ustb_doggo_impedance_controller_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/oakfox/srtp/ros2_ws/src/ustb_doggo_impedance_controller/build/ustb_doggo_impedance_controller",
+		"source" : "/home/oakfox/srtp/ros2_ws/src/ustb_doggo_impedance_controller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

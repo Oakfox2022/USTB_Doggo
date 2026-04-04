@@ -1,0 +1,20 @@
+[0.016s] Invoking command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
+[0.064s] [35m[1mConsolidate compiler generated dependencies of target keyboard_control_vmc[0m
+[0.080s] [ 33%] Built target virtual_model_control
+[0.088s] [ 50%] [32mBuilding CXX object CMakeFiles/keyboard_control_vmc.dir/src/keyboard_control_vmc.cpp.o[0m
+[0.088s] [ 66%] [32mBuilding CXX object CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o[0m
+[2.636s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:[m[K In constructor ‘[01m[KTrotGaitGenerator::TrotGaitGenerator()[m[K’:
+[2.636s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kforward_speed_sub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kforward_speed_[m[K’?
+[2.636s]    16 |     [01;31m[Kforward_speed_sub_[m[K = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+[2.636s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.636s]       |     [32m[Kforward_speed_[m[K
+[2.701s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:[m[K In member function ‘[01m[Kvoid TrotGaitGenerator::forwardSpeedCallback(std_msgs::msg::Float64MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.701s] [01m[K/home/oakfox/srtp/ros2_ws/src/ustb_doggo_virtual_model_control/src/trot_gait_generator.cpp:94:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<std_msgs::msg::Float64MultiArray_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+[2.701s]    94 |     forward_speed_ = msg.[01;31m[Kdata[m[K[0];
+[2.701s]       |                          [01;31m[K^~~~[m[K
+[5.053s] [ 83%] [32m[1mLinking CXX executable keyboard_control_vmc[0m
+[5.282s] [ 83%] Built target keyboard_control_vmc
+[5.434s] gmake[2]: *** [CMakeFiles/trot_gait_generator.dir/build.make:76：CMakeFiles/trot_gait_generator.dir/src/trot_gait_generator.cpp.o] 错误 1
+[5.434s] gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/trot_gait_generator.dir/all] 错误 2
+[5.434s] gmake: *** [Makefile:146：all] 错误 2
+[5.437s] Invoked command in '/home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/oakfox/srtp/ros2_ws/build/ustb_doggo_virtual_model_control -- -j16 -l16
