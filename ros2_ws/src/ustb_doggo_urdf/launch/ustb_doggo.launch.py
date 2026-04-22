@@ -6,6 +6,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, FindExecutable, PathJoinSubstitution
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
+from launch.actions import TimerAction
 
 
 def generate_launch_description():
@@ -23,8 +24,23 @@ def generate_launch_description():
     with open(urdf_path, 'r') as f:
         urdf_content = f.read()
     robot_description = {'robot_description': urdf_content}
-    
+
     controllers_config = os.path.join(pkg_my_robot, 'config', 'controllers.yaml')
+
+    # ========== 启动 rviz2 ==========  
+    rviz_node = TimerAction(
+        period = 5.0,
+        actions = [
+            Node(
+                package='rviz2',
+                executable='rviz2',
+                name='rviz_ocs2',
+                output='screen',
+                parameters=[{'use_sim_time': True}],
+                arguments=['-d' + os.path.join(pkg_my_robot, 'config', 'ustb_doggo_gazebo.rviz')]
+            )
+        ]
+    )
 
     # 1. 启动 Gazebo Classic
     gazebo = IncludeLaunchDescription(
@@ -39,7 +55,10 @@ def generate_launch_description():
         executable='robot_state_publisher',
         name='robot_state_publisher',
         output='screen',
-        parameters=[robot_description]  # 使用统一的机器人描述
+        parameters=[
+            robot_description,
+            {'use_sim_time': True}
+            ]  # 使用统一的机器人描述
     )
 
     # 3. 把 URDF 模型丢进 Gazebo
@@ -54,19 +73,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # ========== 4. 启动ros2_control节点 ==========
-    control_node = Node(
-        package='controller_manager',
-        executable='ros2_control_node',
-        parameters=[
-            robot_description,  # 机器人描述
-            controllers_config,  # 控制器配置
-            {'use_sim_time': True}  # 重要：使用仿真时间
-        ],
-        output='screen'
-    )
-
-    # ========== 5. 加载控制器 ==========
+    # ========== 4. 加载控制器 ==========
     # 先加载joint_state_broadcaster
     joint_state_broadcaster_spawner = Node(
         package='controller_manager',
@@ -90,7 +97,7 @@ def generate_launch_description():
         output='screen'
     )
     
-    # ========== 6. 延迟启动逻辑 ==========
+    # ========== 延迟启动逻辑 ==========
     # 等joint_state_broadcaster启动后再启动其他控制器
 
     delay_leg_controller = RegisterEventHandler(
@@ -108,10 +115,10 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        rviz_node,
         gazebo,
         robot_state_publisher,
         spawn_entity,
-        control_node,
         joint_state_broadcaster_spawner,
         delay_leg_controller,
         delay_wheel_controller

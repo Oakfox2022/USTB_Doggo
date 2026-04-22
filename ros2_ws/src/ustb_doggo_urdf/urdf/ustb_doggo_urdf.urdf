@@ -1196,6 +1196,46 @@
       xyz="0 0 1" />
   </joint>
 
+  <!--激光雷达-->
+  <link name="laser_link">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+      <material
+        name="">
+        <color rgba="0.30392 0.30392 0.30392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_laser"
+    type="fixed">
+    <origin
+      xyz="0 0 0.09"
+      rpy="0 0 -1.57079633" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
   <!--补闭环-->
   <gazebo>
     <joint name="Joint_Wheel_lf_1" type="revolute">
@@ -1269,6 +1309,8 @@
       <updateRate>100</updateRate>
     </plugin>
   </gazebo>
+
+  <!--激光雷达配置-->
 
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
@@ -1364,21 +1406,25 @@
       <command_interface name="velocity"/>
       <state_interface name="effort"/>
       <state_interface name="velocity"/>
+      <state_interface name="position"/>
     </joint>
     <joint name="Joint_Wheel_lb">
       <command_interface name="velocity"/>
       <state_interface name="effort"/>
       <state_interface name="velocity"/>
+      <state_interface name="position"/>
     </joint>
     <joint name="Joint_Wheel_rf">
       <command_interface name="velocity"/>
       <state_interface name="effort"/>
       <state_interface name="velocity"/>
+      <state_interface name="position"/>
     </joint>
     <joint name="Joint_Wheel_rb">
       <command_interface name="velocity"/>
       <state_interface name="effort"/>
       <state_interface name="velocity"/>
+      <state_interface name="position"/>
     </joint>
   </ros2_control>
 
