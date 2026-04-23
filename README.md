@@ -27,39 +27,24 @@ cd USTB_Doggo/ros2_ws/
 colcon build
 source install/setup.bash
 ```
-4.**启动仿真**
+4.**简单仿真实验**
 ```bash
 ros2 launch ustb_doggo_urdf ustb_doggo.launch.py
 ```
-5.**阻抗控制**
+5.**阻抗控制实验**
+```bash
+ros2 launch ustb_doggo_impedance_control ustb_doggo_impedance_control.launch.py
+```
+在弹出的终端窗口中输入键盘按键进行控制：（目前有效按键：w s p 自行探索）
 
-关闭其余控制器，运行：
+6.**VMC控制实验**
 ```bash
-ros2 run ustb_doggo_impedance_controller cartesian_impedance
+ros2 launch ustb_doggo_virtual_model_control ustb_doggo_virtual_model_control.launch.py
 ```
-可进行键盘控制：（目前有效按键：w a s d q e i j k l p 1 2 3 4 自行探索）
-```bash
-ros2 run ustb_doggo_impedance_controller keyboard_control
-```
-6.**VMC控制（未完善）**
-
-关闭其余控制器，运行：
-```bash
-ros2 run ustb_doggo_virtual_model_control virtual_model_control
-```
+在弹出的终端窗口中输入键盘按键进行控制：（目前有效按键：w a s d q e i j k l p 1 2 3 4 自行探索）
 可实现机身姿态保持水平
 
-7.**trot步态**
-
-在阻抗控制器运行的情况下，运行：
+7.**正运动学打印足端位置**
 ```bash
-ros2 run ustb_doggo_virtual_model_control trot_gait_generator
-```
-可进行键盘控制：（目前有效按键：w s p 自行探索）
-```bash
-ros2 run ustb_doggo_virtual_model_control keyboard_control_vmc
-```
-8.**打印足端位置**
-```bash
-ros2 run ustb_doggo_impedance_controller keyboard_control
+ros2 run ustb_doggo_impedance_control forward_kinematics
 ```
