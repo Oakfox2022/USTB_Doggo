@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ustb_doggo_impedance_controller)
+project(ustb_doggo_impedance_control)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -72,6 +72,18 @@ target_link_libraries(cartesian_impedance
   urdfdom_model
 )
 
+# 节点 trot_gait_generator
+add_executable(trot_gait_generator src/trot_gait_generator.cpp)
+target_include_directories(trot_gait_generator PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(trot_gait_generator PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  trot_gait_generator
+  "rclcpp"
+  "std_msgs"
+)
+
 # 节点 keyboard_control
 add_executable(keyboard_control src/keyboard_control.cpp)
 
@@ -87,13 +99,34 @@ ament_target_dependencies(
   "std_msgs"
 )
 
+# 节点 keyboard_control_trot
+add_executable(keyboard_control_trot src/keyboard_control_trot.cpp)
+
+target_include_directories(keyboard_control_trot PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+
+target_compile_features(keyboard_control_trot PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+
+ament_target_dependencies(
+  keyboard_control_trot
+  "rclcpp"
+  "std_msgs"
+)
+
 # 安装
 install(TARGETS 
   joint_impedance
   forward_kinematics
   cartesian_impedance
+  trot_gait_generator
   keyboard_control
+  keyboard_control_trot
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY 
+  launch
+  DESTINATION share/${PROJECT_NAME}/)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

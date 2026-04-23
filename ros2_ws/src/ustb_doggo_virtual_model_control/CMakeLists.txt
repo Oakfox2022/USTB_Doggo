@@ -14,18 +14,6 @@ find_package(Eigen3 REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 
-# 节点 trot_gait_generator
-add_executable(trot_gait_generator src/trot_gait_generator.cpp)
-target_include_directories(trot_gait_generator PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(trot_gait_generator PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-ament_target_dependencies(
-  trot_gait_generator
-  "rclcpp"
-  "std_msgs"
-)
-
 # 节点 virtual_model_control
 add_executable(virtual_model_control src/virtual_model_control.cpp)
 target_include_directories(virtual_model_control PUBLIC
@@ -57,10 +45,13 @@ ament_target_dependencies(
 )
 
 install(TARGETS 
-  trot_gait_generator
   virtual_model_control
   keyboard_control_vmc
   DESTINATION lib/${PROJECT_NAME})
+  
+install(DIRECTORY 
+  launch
+  DESTINATION share/${PROJECT_NAME}/)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

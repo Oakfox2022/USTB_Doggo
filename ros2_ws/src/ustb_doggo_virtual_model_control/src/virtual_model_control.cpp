@@ -309,7 +309,7 @@ private:
         }
     }
 
-    //odem回调
+    //odom回调
     void odomCallback(const nav_msgs::msg::Odometry::SharedPtr msg)
     {
         // 位置
@@ -370,6 +370,7 @@ private:
         }
 
         stance = msg->data;
+        n_support = stance[0] + stance[1] + stance[2] + stance[3];
     }
 
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr effort_pub_;

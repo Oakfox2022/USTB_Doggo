@@ -1,6 +1,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
+#include <std_msgs/msg/u_int64_multi_array.hpp>
 #include <Eigen/Dense>
 #include <vector>
 #include <cmath>
@@ -10,6 +11,7 @@
 #include <pinocchio/algorithm/rnea.hpp>
 #include <pinocchio/algorithm/joint-configuration.hpp>
 #include <ament_index_cpp/get_package_share_directory.hpp>
+
 #include <nav_msgs/msg/odometry.hpp>
 
 using namespace Eigen;
@@ -52,6 +54,11 @@ public:
         para_k_d_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/para_k_d_", 10,
             std::bind(&CartesianImpedance::paraKDCallback, this, std::placeholders::_1));
+
+        //接收的相位类型信息
+        phase_type_pub_ = this->create_subscription<std_msgs::msg::UInt64MultiArray>(
+            "/phase_type", 10,
+            std::bind(&CartesianImpedance::phaseTypeCallback, this, std::placeholders::_1));
 
         //发布的力矩
         effort_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
@@ -268,6 +275,7 @@ private:
         Vector2d delta_vel_;
         Vector2d F_virt;
         Vector2d tau;
+        double Fz_per_leg = total_mass * g / static_cast<double>(n_support); //地面对每条腿的支撑力
         Vector2d foot_force_world(0, -Fz_per_leg);
         for(size_t i = 0; i < 4; ++i)
         {
@@ -278,8 +286,7 @@ private:
             //计算笛卡尔空间虚拟力
             F_virt = K_ * delta_pos_ + D_ * delta_vel_;
 
-            //加足端接触力补偿（与pinocchio重力补偿二选一）
-            F_virt += foot_force_world;
+            F_virt += foot_force_world;//加足端接触力补偿
 
             //通过雅可比转置映射到关节力矩
             if(i < 2)
@@ -345,12 +352,28 @@ private:
         RCLCPP_INFO(this->get_logger(), "Parameters changed!: K = [%f %f], D = [%f %f]", K_(0,0), K_(1,1), D_(0,0), D_(1,1));
     }
 
+    void phaseTypeCallback(const std_msgs::msg::UInt64MultiArray::SharedPtr msg)
+    {
+        //判断收到的期望位置数据是否完整
+        if (msg->data.size() != 4)
+        {
+            RCLCPP_WARN(this->get_logger(),
+                "Received phase_type with wrong size: %zu (expected 4), ignoring",
+                msg->data.size());
+            return;
+        }
+
+        stance = msg->data;
+        n_support = stance[0] + stance[1] + stance[2] + stance[3];
+    }
+
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr effort_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr current_foot_pos_pub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub_;
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr desired_pos_sub_;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr para_k_d_sub_;
+    rclcpp::Subscription<std_msgs::msg::UInt64MultiArray>::SharedPtr phase_type_pub_;
 
     std::vector<std::string> leg_joint_names =
     {
@@ -394,8 +417,8 @@ private:
 
     double total_mass = 3.77;  //整机重量（kg）
     double g = 9.81;    //重力加速度
-    size_t n_support = 4;
-    double Fz_per_leg = total_mass * g / n_support; //地面对每条腿的支撑力
+    std::vector<size_t> stance = {1, 1, 1, 1};//站立姿态
+    size_t n_support = stance[0] + stance[1] + stance[2] + stance[3];
 
     pinocchio::Model pin_model_;
     pinocchio::Data pin_data_;

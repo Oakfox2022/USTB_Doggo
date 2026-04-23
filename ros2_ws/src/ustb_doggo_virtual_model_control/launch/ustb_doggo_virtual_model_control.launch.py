@@ -8,7 +8,6 @@ from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 from launch.actions import TimerAction
 
-
 def generate_launch_description():
 
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
@@ -29,7 +28,7 @@ def generate_launch_description():
 
     # ========== 启动 rviz2 ==========  
     rviz_node = TimerAction(
-        period = 5.0,
+        period = 0.0,
         actions = [
             Node(
                 package='rviz2',
@@ -47,7 +46,6 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
         ),
-        launch_arguments={'world': os.path.join(get_package_share_directory('ustb_doggo_urdf'), 'world', 'roomMin.world'),"verbose": "false"}.items(),
     )
 
     # 2. robot_state_publisher
@@ -115,6 +113,23 @@ def generate_launch_description():
         )
     )
 
+    virtual_model_control = Node(
+        package='ustb_doggo_virtual_model_control',
+        executable='virtual_model_control',
+        name='virtual_model_control',
+        output='screen'
+    )
+
+    keyboard_control_vmc = ExecuteProcess(
+        cmd=[
+            'gnome-terminal', '--',
+            'bash', '-c',
+            'ros2 run ustb_doggo_virtual_model_control keyboard_control_vmc; exec bash'
+        ],
+        additional_env=os.environ,
+        output='screen'
+    )
+
     return LaunchDescription([
         rviz_node,
         gazebo,
@@ -122,5 +137,7 @@ def generate_launch_description():
         spawn_entity,
         joint_state_broadcaster_spawner,
         delay_leg_controller,
-        delay_wheel_controller
+        delay_wheel_controller,
+        virtual_model_control,
+        keyboard_control_vmc
     ])
