@@ -1218,7 +1218,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <box size="0.01 0.01 0.01"/>
+        <box size="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1226,7 +1226,7 @@
     name="joint_laser"
     type="fixed">
     <origin
-      xyz="0 0 0.09"
+      xyz="0 0 0.1"
       rpy="0 0 -1.57079633" />
     <parent
       link="base_link" />
@@ -1296,7 +1296,44 @@
     </joint>
   </gazebo>
   
-  <!--接控制层-->
+  <!--激光雷达配置-->
+  <gazebo reference="laser_link">
+    <sensor type="ray" name="stl27l_lidar">
+      <pose>0 0 0 0 0 0</pose>
+      <update_rate>10</update_rate>  <!-- STL27L 扫描频率 (Hz) -->
+      <always_on>true</always_on>     <!-- 永远启用激光雷达 -->
+      <visualize>false</visualize> <!-- Gazebo显示激光图层 -->
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>2160</samples>  <!-- STL27L 激光点数 -->
+            <resolution>1</resolution>
+            <min_angle>-3.1416</min_angle>  <!-- -180° -->
+            <max_angle>3.1416</max_angle>  <!-- +180° -->
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>  <!-- STL27L 最小测距 -->
+          <max>12.0</max>  <!-- STL27L 最大测距 30m -->
+          <resolution>0.015</resolution>  <!-- 分辨率 -->
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.005</stddev>  <!-- STL27L 误差标准差 -->
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_laser" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <namespace>/</namespace>
+          <remapping>~/out:=/scan</remapping> <!-- 指定话题名 -->
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>laser_link</frame_name> <!-- 指定参考坐标系 -->
+      </plugin>
+    </sensor>
+  </gazebo>
+
   <gazebo>
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <parameters>/home/oakfox/srtp/ros2_ws/src/ustb_doggo_urdf/config/controllers.yaml</parameters>
@@ -1304,14 +1341,13 @@
     <plugin name="p3d_base" filename="libgazebo_ros_p3d.so">
       <body_name>base_link</body_name>
       <topicName>odom</topicName>
-      <frameName>world</frameName>
+      <frame_name>odom</frame_name>
       <xyzOffset>0 0 0</xyzOffset>
       <updateRate>100</updateRate>
     </plugin>
   </gazebo>
-
-  <!--激光雷达配置-->
-
+  
+  <!--接控制层-->
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>

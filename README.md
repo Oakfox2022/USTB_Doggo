@@ -48,3 +48,10 @@ ros2 launch ustb_doggo_virtual_model_control ustb_doggo_virtual_model_control.la
 ```bash
 ros2 run ustb_doggo_impedance_control forward_kinematics
 ```
+
+8.**slam-toolbox建图实验**
+```bash
+ros2 launch ustb_doggo_slam ustb_doggo_slam.launch.py
+```
+在弹出的终端窗口中输入键盘按键控制机器人移动完成建图
+
