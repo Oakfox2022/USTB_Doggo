@@ -35,7 +35,7 @@ ros2 launch ustb_doggo_urdf ustb_doggo.launch.py
 ```bash
 ros2 launch ustb_doggo_impedance_control ustb_doggo_impedance_control.launch.py
 ```
-在弹出的终端窗口中输入键盘按键进行控制：（目前有效按键：w s p 自行探索）
+在弹出的终端窗口中输入键盘按键进行控制：（目前有效按键：w a s d f t p 自行探索）
 
 6.**VMC控制实验**
 ```bash
