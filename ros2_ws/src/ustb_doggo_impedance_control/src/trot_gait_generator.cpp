@@ -1,6 +1,8 @@
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
 #include <std_msgs/msg/u_int64_multi_array.hpp>
+#include "std_msgs/msg/float64.hpp"
+#include <std_msgs/msg/bool.hpp>
 #include <cmath>
 #include <chrono>
 
@@ -11,13 +13,17 @@ class TrotGaitGenerator : public rclcpp::Node
 public:
   TrotGaitGenerator() : Node("trot_gait_generator")
   {
+    if_trot_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+      "/if_trot", 10,
+      std::bind(&TrotGaitGenerator::ifTrotCallback, this, std::placeholders::_1));
+
     desired_foot_positions_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
       "/desired_foot_positions", 10);
 
     phase_type_pub_ = this->create_publisher<std_msgs::msg::UInt64MultiArray>(
       "/phase_type", 10);
 
-    forward_speed_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+    forward_speed_sub_ = this->create_subscription<std_msgs::msg::Float64>(
       "/forward_speed", 10,
       std::bind(&TrotGaitGenerator::forwardSpeedCallback, this, std::placeholders::_1));
 
@@ -37,62 +43,75 @@ private:
     std_msgs::msg::UInt64MultiArray phase_type_;//相位类型，1为支撑相，0为摆动相
     phase_type_.data.resize(4, 1);
 
-    // 更新相位 (0~1 循环)
-    phase_ = std::fmod(phase_ + phase_increment_ * 0.01, 1.0);
-
-    // 每个步态周期的前进位移增量
-    double stance_displacement = forward_speed_ * cycle_time_ * 0.5;  // 半周期位移
-
-    for (int leg = 0; leg < 4; ++leg)
+    if(IF_trot == true)
     {
-      // 对角腿相位偏移：lf/rb offset 0, rf/lb offset 0.5
-      double leg_phase;
-      if(leg == 0 || leg == 3)
-      {
-        leg_phase = std::fmod(phase_, 1.0);
-      }
-      else
-      {
-        leg_phase = std::fmod(phase_ + 0.5, 1.0);
-      }
+      // 更新相位 (0~1 循环)
+      phase_ = std::fmod(phase_ + phase_increment_ * 0.01, 1.0);
 
-      double x, z;
+      // 每个步态周期的前进位移增量
+      double stance_displacement = forward_speed_ * cycle_time_ * 0.5;  // 半周期位移
 
-      if (leg_phase < 0.5)// 摆动相 (swing phase)
+      for (int leg = 0; leg < 4; ++leg)
       {
-        phase_type_.data[leg] = 0;
-        double t = leg_phase / 0.5;               // 0~1
-        // x: 前移（从 -stance/2 到 +stance/2）
-        x = foot_rest_x_[leg] + stance_displacement * (2.0 * t - 1.0);
-        // z: 正弦抬腿
-        z = foot_rest_z_[leg] + step_height_ * std::sin(M_PI * t);
-      }
-      else// 支撑相 (stance phase)
-      {
-        phase_type_.data[leg] = 1;
-        double t = (leg_phase - 0.5) / 0.5;       // 0~1
-        // x: 线性后移（实现身体前进）
-        x = foot_rest_x_[leg] + stance_displacement * (1.0 - 2.0 * t);
-        z = foot_rest_z_[leg];
-      }
+        // 对角腿相位偏移：lf/rb offset 0, rf/lb offset 0.5
+        double leg_phase;
+        if(leg == 0 || leg == 3)
+        {
+          leg_phase = std::fmod(phase_, 1.0);
+        }
+        else
+        {
+          leg_phase = std::fmod(phase_ + 0.5, 1.0);
+        }
 
-      // 填入 msg (x,z 交替)
-      msg.data[2 * leg]     = x;
-      msg.data[2 * leg + 1] = z;
+        double x, z;
+
+        if (leg_phase < 0.5)// 摆动相 (swing phase)
+        {
+          phase_type_.data[leg] = 0;
+          double t = leg_phase / 0.5;               // 0~1
+          // x: 前移（从 -stance/2 到 +stance/2）
+          x = foot_rest_x_[leg] + stance_displacement * (2.0 * t - 1.0);
+          // z: 正弦抬腿
+          z = foot_rest_z_[leg] + step_height_ * std::sin(M_PI * t);
+        }
+        else// 支撑相 (stance phase)
+        {
+          phase_type_.data[leg] = 1;
+          double t = (leg_phase - 0.5) / 0.5;       // 0~1
+          // x: 线性后移（实现身体前进）
+          x = foot_rest_x_[leg] + stance_displacement * (1.0 - 2.0 * t);
+          z = foot_rest_z_[leg];
+        }
+
+        // 填入 msg (x,z 交替)
+        msg.data[2 * leg]     = x;
+        msg.data[2 * leg + 1] = z;
+      }
     }
-
+    else if(IF_trot == false)
+    {
+      msg.data = {0.0, -body_height_, 0.0, -body_height_, 0.0, -body_height_, 0.0, -body_height_};
+      phase_type_.data = {1, 1, 1, 1};
+    }
     phase_type_pub_->publish(phase_type_);
     desired_foot_positions_pub_->publish(msg);
   }
 
-  void forwardSpeedCallback(const std_msgs::msg::Float64MultiArray::SharedPtr msg)
+  void forwardSpeedCallback(const std_msgs::msg::Float64::SharedPtr msg)
   {
-    forward_speed_ = -msg->data[0];
+    forward_speed_ = -msg->data;
+  }
+
+  void ifTrotCallback(const std_msgs::msg::Bool::SharedPtr msg)
+  {
+    IF_trot = msg->data;
   }
 
   rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr desired_foot_positions_pub_;
   rclcpp::Publisher<std_msgs::msg::UInt64MultiArray>::SharedPtr phase_type_pub_;
-  rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr forward_speed_sub_;
+  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr forward_speed_sub_;
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr if_trot_sub_;
   rclcpp::TimerBase::SharedPtr timer_;
 
   //参数
@@ -102,6 +121,8 @@ private:
   double forward_speed_ = 0.0;// 前进速度 (m/s)
   double phase_ = 0.0;
   double phase_increment_ = 1.0 / cycle_time_;// 每秒相位增量
+
+  bool IF_trot = false;
 
   // 每条腿的 rest 位置
   // 顺序：lf(0), lb(1), rf(2), rb(3)

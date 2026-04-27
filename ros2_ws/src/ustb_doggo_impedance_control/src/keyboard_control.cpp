@@ -5,19 +5,17 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
+#include "std_msgs/msg/float64.hpp"
+#include <std_msgs/msg/bool.hpp>
 
 class KeyboardControl : public rclcpp::Node
 {
 public:
     KeyboardControl() : Node("keyboard_control")
     {
+        forward_speed_pub_ = this->create_publisher<std_msgs::msg::Float64>("/forward_speed", 10);
         wheel_vel_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/wheel_velocity_controller/commands", 10);
-        foot_pos_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/desired_foot_positions", 10);
-
-        //接收的当前足端位置
-        current_foot_pos_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
-            "/current_foot_position", 10,
-            std::bind(&KeyboardControl::currentFootPosCallback, this, std::placeholders::_1));
+        if_trot_pub_ = this->create_publisher<std_msgs::msg::Bool>("/if_trot", 10);
 
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(8),   //125Hz（由键盘回报率决定）
@@ -39,11 +37,18 @@ private:
         if (c != 0)
         {
             processKey(c);
-            std_msgs::msg::Float64MultiArray msg;
-            msg.data = wheel_vel_;
-            wheel_vel_pub_->publish(msg);
-            msg.data = foot_pos_;
-            foot_pos_pub_->publish(msg);
+
+            std_msgs::msg::Float64 forward_speed_msg;
+            forward_speed_msg.data = forward_speed_;
+            forward_speed_pub_->publish(forward_speed_msg);
+
+            std_msgs::msg::Float64MultiArray wheel_vel_msg;
+            wheel_vel_msg.data = wheel_vel_;
+            wheel_vel_pub_->publish(wheel_vel_msg);
+
+            std_msgs::msg::Bool if_trot_msg;
+            if_trot_msg.data = IF_trot;
+            if_trot_pub_->publish(if_trot_msg);
         }
     }
 
@@ -60,96 +65,115 @@ private:
     {
         switch (key)
         {
-        //前进后退左转右转
         case 'w':
-            L_VEL_ += DELTA_VEL_;
-            R_VEL_ += DELTA_VEL_;
-            wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
-            RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            if(IF_foot == true && IF_trot == true)
+            {
+                forward_speed_ += 0.1;
+                RCLCPP_INFO(this->get_logger(), "Current foot forward speed: %f", forward_speed_);
+            }
+            else if(IF_foot == true && IF_trot == false)
+            {
+                RCLCPP_WARN(this->get_logger(), "Press 't' to start trot!");
+            }
+            else if(IF_foot == false)
+            {
+                L_VEL_ += DELTA_VEL_;
+                R_VEL_ += DELTA_VEL_;
+                wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
+                RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            }
             break;
         case 's':
-            L_VEL_ -= DELTA_VEL_;
-            R_VEL_ -= DELTA_VEL_;
-            wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
-            RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            if(IF_foot == true && IF_trot == true)
+            {
+                forward_speed_ -= 0.1;
+                RCLCPP_INFO(this->get_logger(), "Current foot forward speed: %f", forward_speed_);
+            }
+            else if(IF_foot == true && IF_trot == false)
+            {
+                RCLCPP_WARN(this->get_logger(), "Press 't' to start trot!");
+            }
+            else if(IF_foot == false)
+            {
+                L_VEL_ -= DELTA_VEL_;
+                R_VEL_ -= DELTA_VEL_;
+                wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
+                RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            }
             break;
+
         case 'a':
-            L_VEL_ -= DELTA_VEL_;
-            R_VEL_ += DELTA_VEL_;
-            wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
-            RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            if(IF_foot == false)
+            {
+                L_VEL_ -= DELTA_VEL_;
+                R_VEL_ += DELTA_VEL_;
+                wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
+                RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            }
+            else
+            {
+                RCLCPP_WARN(this->get_logger(), "Press 'f' to control wheels!");
+            }
             break;
         case 'd':
-            L_VEL_ += DELTA_VEL_;
-            R_VEL_ -= DELTA_VEL_;
-            wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
-            RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
-            break;
-        case 'p':
-            L_VEL_ = 0.0;
-            R_VEL_ = 0.0;        
-            wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
-            RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            if(IF_foot == false)
+            {
+                L_VEL_ += DELTA_VEL_;
+                R_VEL_ -= DELTA_VEL_;
+                wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
+                RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            }
+            else
+            {
+                RCLCPP_WARN(this->get_logger(), "Press 'f' to control wheels!");
+            }
             break;
 
-        //整机高度控制
-        case 'q':
-            if(Z_POS_ > Z_MIN_)
+        case 'f':
+            if(IF_foot == false)
             {
-                Z_POS_ -= 0.01;
+                IF_foot = true;
+                RCLCPP_INFO(this->get_logger(), "Foot control!");
             }
-            foot_pos_[1] = Z_POS_;
-            foot_pos_[3] = Z_POS_;
-            foot_pos_[5] = Z_POS_;
-            foot_pos_[7] = Z_POS_;
+            else
+            {
+                IF_foot = false;
+                RCLCPP_INFO(this->get_logger(), "Wheel control!");
+            }
             break;
-        case 'e':
-            if(Z_POS_ < Z_MAX_)
+
+        case 't':
+            if(IF_trot == false)
             {
-                Z_POS_ += 0.01;
+                IF_trot = true;
+                RCLCPP_INFO(this->get_logger(), "Trot started!");
             }
-            foot_pos_[1] = Z_POS_;
-            foot_pos_[3] = Z_POS_;
-            foot_pos_[5] = Z_POS_;
-            foot_pos_[7] = Z_POS_;
+            else
+            {
+                IF_trot = false;
+                RCLCPP_INFO(this->get_logger(), "Trot closed!");
+                forward_speed_ = 0.0;
+                RCLCPP_INFO(this->get_logger(), "Current foot forward speed: %f", forward_speed_);
+            }
+            break;
+
+        case 'p':
+            if(IF_foot == true)
+            {
+                forward_speed_ = 0.0;
+                RCLCPP_INFO(this->get_logger(), "Current foot forward speed: %f", forward_speed_);
+            }
+            else if(IF_foot == false)
+            {
+                L_VEL_ = 0.0;
+                R_VEL_ = 0.0;        
+                wheel_vel_ = {L_VEL_, L_VEL_, -R_VEL_, -R_VEL_};
+                RCLCPP_INFO(this->get_logger(), "Current wheel velocity: L_VEL_ = %f, R_VEL_ = %f", L_VEL_, R_VEL_);
+            }
             break;
         
-        //单腿控制
-        case '1':
-            foot_num_ = 0;//控制左前腿
-            break;
-        case '2':
-            foot_num_ = 2;//控制左后腿
-            break;
-        case '3':
-            foot_num_ = 4;//控制右前腿
-            break;
-        case '4':
-            foot_num_ = 6;//控制右后腿
-            break;
-        case 'j':
-            foot_pos_[foot_num_] -= 0.01;//前伸
-            break;
-        case 'l':
-            foot_pos_[foot_num_] += 0.01;//后伸
-            break;
-        case 'k':
-            foot_pos_[foot_num_ + 1] -= 0.01;//下压
-            break;
-        case 'i':
-            foot_pos_[foot_num_ + 1] += 0.01;//上抬
-            break;
-
         default:
             break;
-        }
-    }
-
-    void currentFootPosCallback(const std_msgs::msg::Float64MultiArray::SharedPtr msg)
-    {
-        for(size_t i = 0; i < msg->data.size(); ++i)
-        {
-            current_foot_position_[i] = msg->data[i];
         }
     }
 
@@ -169,24 +193,23 @@ private:
     }
 
 private:
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr forward_speed_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr wheel_vel_pub_;
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr foot_pos_pub_;
-    rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr current_foot_pos_sub_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr if_trot_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
 
-    size_t foot_num_ = 0;
+    double forward_speed_ = 0.0;
+    std::vector<double> wheel_vel_ = {0.0, 0.0, 0.0, 0.0};
+
     double L_VEL_ = 0.0;
     double R_VEL_ = 0.0;
     double DELTA_VEL_ = 0.5;
-    double Z_POS_ = -0.2;
-    double Z_MAX_ = -0.06;
-    double Z_MIN_ = -0.23;
-    std::vector<double> wheel_vel_ = {0.0, 0.0, 0.0, 0.0};
-    std::vector<double> foot_pos_ = {0.0, Z_POS_, 0.0, Z_POS_, 0.0, Z_POS_, 0.0, Z_POS_};
-    std::vector<double> current_foot_position_ = foot_pos_;
+
+    bool IF_foot = false;
+    bool IF_trot = false;
+
     termios orig_termios_;
 };
-        
 
 int main(int argc, char **argv)
 {

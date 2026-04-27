@@ -127,11 +127,11 @@ def generate_launch_description():
         output='screen'
     )
 
-    keyboard_control_trot = ExecuteProcess(
+    keyboard_control = ExecuteProcess(
         cmd=[
             'gnome-terminal', '--',
             'bash', '-c',
-            'ros2 run ustb_doggo_impedance_control keyboard_control_trot; exec bash'
+            'ros2 run ustb_doggo_impedance_control keyboard_control; exec bash'
         ],
         additional_env=os.environ,
         output='screen'
@@ -147,5 +147,5 @@ def generate_launch_description():
         delay_wheel_controller,
         cartesian_impedance,
         trot_gait_generator,
-        keyboard_control_trot
+        keyboard_control
     ])

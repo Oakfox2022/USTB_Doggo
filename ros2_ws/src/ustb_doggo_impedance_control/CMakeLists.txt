@@ -99,21 +99,6 @@ ament_target_dependencies(
   "std_msgs"
 )
 
-# 节点 keyboard_control_trot
-add_executable(keyboard_control_trot src/keyboard_control_trot.cpp)
-
-target_include_directories(keyboard_control_trot PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-
-target_compile_features(keyboard_control_trot PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-
-ament_target_dependencies(
-  keyboard_control_trot
-  "rclcpp"
-  "std_msgs"
-)
-
 # 安装
 install(TARGETS 
   joint_impedance
@@ -121,7 +106,6 @@ install(TARGETS
   cartesian_impedance
   trot_gait_generator
   keyboard_control
-  keyboard_control_trot
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY 
