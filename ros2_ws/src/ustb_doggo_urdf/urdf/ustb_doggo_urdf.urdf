@@ -1197,11 +1197,21 @@
   </joint>
 
   <!--激光雷达-->
-  <link name="laser_link">
+  <link
+    name="laser_link">
     <inertial>
-      <mass value="0.0001"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+      <mass
+        value="0.0001"/>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+      <inertia
+        ixx="0.0001"
+        ixy="0"
+        ixz="0"
+        iyy="0.0001"
+        iyz="0"
+        izz="0.0001"/>
     </inertial>
     <visual>
       <origin
@@ -1212,11 +1222,14 @@
       </geometry>
       <material
         name="">
-        <color rgba="0.30392 0.30392 0.30392 1" />
+        <color
+          rgba="0.30392 0.30392 0.30392 1" />
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
         <box size="0.001 0.001 0.001"/>
       </geometry>
@@ -1227,13 +1240,61 @@
     type="fixed">
     <origin
       xyz="0 0 0.1"
-      rpy="0 0 -1.57079633" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="laser_link" />
     <axis
       xyz="0 0 -1" />
+  </joint>
+  
+  <!--IMU-->
+  <link
+    name="imu_link">
+    <inertial>
+      <mass
+        value="0.001"/>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+      <inertia
+        ixx="0.0001"
+        ixy="0"
+        ixz="0"
+        iyy="0.0001"
+        iyz="0"
+        izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin  
+      xyz="0.0235 0 0.0351"
+      rpy="0 0 0"/>
+    <parent
+      link="base_link"/>
+    <child
+      link="imu_link"/>
+    <axis
+      xyz="0 0 0"/>
   </joint>
 
   <!--补闭环-->
@@ -1300,37 +1361,58 @@
   <gazebo reference="laser_link">
     <sensor type="ray" name="stl27l_lidar">
       <pose>0 0 0 0 0 0</pose>
-      <update_rate>10</update_rate>  <!-- STL27L 扫描频率 (Hz) -->
-      <always_on>true</always_on>     <!-- 永远启用激光雷达 -->
-      <visualize>false</visualize> <!-- Gazebo显示激光图层 -->
+      <update_rate>10</update_rate>   STL27L 扫描频率 (Hz)
+      <always_on>true</always_on>     永远启用激光雷达
+      <visualize>false</visualize>    Gazebo显示激光图层
       <ray>
         <scan>
           <horizontal>
-            <samples>2160</samples>  <!-- STL27L 激光点数 -->
+            <samples>2160</samples>   STL27L 激光点数
             <resolution>1</resolution>
-            <min_angle>-3.1416</min_angle>  <!-- -180° -->
-            <max_angle>3.1416</max_angle>  <!-- +180° -->
+            <min_angle>-3.1416</min_angle>  -180°
+            <max_angle>3.1416</max_angle>  +180°
           </horizontal>
         </scan>
         <range>
-          <min>0.05</min>  <!-- STL27L 最小测距 -->
-          <max>12.0</max>  <!-- STL27L 最大测距 30m -->
-          <resolution>0.015</resolution>  <!-- 分辨率 -->
+          <min>0.05</min>  STL27L 最小测距
+          <max>12.0</max>  STL27L 最大测距 30m
+          <resolution>0.015</resolution>  分辨率
         </range>
         <noise>
           <type>gaussian</type>
           <mean>0.0</mean>
-          <stddev>0.005</stddev>  <!-- STL27L 误差标准差 -->
+          <stddev>0.005</stddev>  STL27L 误差标准差
         </noise>
       </ray>
       <plugin name="gazebo_ros_laser" filename="libgazebo_ros_ray_sensor.so">
         <ros>
           <namespace>/</namespace>
-          <remapping>~/out:=/scan</remapping> <!-- 指定话题名 -->
+          <remapping>~/out:=/scan</remapping> 指定话题名
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type>
-        <frame_name>laser_link</frame_name> <!-- 指定参考坐标系 -->
+        <frame_name>laser_link</frame_name>   指定参考坐标系
       </plugin>
+    </sensor>
+  </gazebo>
+
+  <!--IMU配置-->
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>1000</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>1000.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
     </sensor>
   </gazebo>
 

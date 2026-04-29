@@ -68,6 +68,27 @@ def generate_launch_description():
         output='screen'
     )
 
+    # ================= rf2o =================    
+    rf2o_node = Node(
+        package='rf2o_laser_odometry',
+        executable='rf2o_laser_odometry_node',
+        name='rf2o_laser_odometry',
+        output='screen',
+        parameters=[{
+                    'laser_scan_topic' : '/scan',
+                    'odom_topic' : '/odom_rf2o',
+                    'publish_tf' : False,
+                    'base_frame_id' : 'base_link',
+                    'odom_frame_id' : 'odom',
+                    'init_pose_from_topic' : '',
+                    'freq' : 10.0}],
+    )
+
+    rf2o_delayed = TimerAction(
+        period=2.0,
+        actions=[rf2o_node]
+    )
+
     # ================= EKF =================
     ekf = Node(
         package='robot_localization',
@@ -81,7 +102,7 @@ def generate_launch_description():
     )
 
     ekf_delayed = TimerAction(
-        period=3.0,
+        period=7.0,
         actions=[ekf]
     )
 
@@ -190,6 +211,7 @@ def generate_launch_description():
         delay_leg_controller,
         delay_wheel_controller,
 
+        rf2o_delayed,
         ekf_delayed,
         slam_delayed,
         rviz_delayed,

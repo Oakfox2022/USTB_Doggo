@@ -29,7 +29,7 @@ def generate_launch_description():
 
     # ========== 启动 rviz2 ==========  
     rviz_node = TimerAction(
-        period = 5.0,
+        period = 2.0,
         actions = [
             Node(
                 package='rviz2',
@@ -47,7 +47,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
         ),
-        launch_arguments={'world': os.path.join(get_package_share_directory('ustb_doggo_urdf'), 'world', 'roomMin.world'),"verbose": "false"}.items(),
+        # launch_arguments={'world': os.path.join(get_package_share_directory('ustb_doggo_urdf'), 'world', 'roomMin.world'),"verbose": "false"}.items(),
     )
 
     # 2. robot_state_publisher
